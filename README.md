@@ -2,60 +2,19 @@
 Java練習用（Spring boot）
 
 ## 環境構築
-### 前提
-- Ubuntu20.04(wsl2)  
-![wsl](img/wsl_status.png "Ubuntuの状態")
-
-### GitHubからUbuntu上へクローン
-- VSCodeで好きなディレクトリにクローン（完）
-
-- VSCode拡張機能一覧
-  - Spring Boot Extension Pack
-  - Extension Pack for Java
-
-### 動作確認
-- サーバ起動（AppApplicationの左の▷をクリック）  
-![wsl](img/operation_check01.png "起動")
-
-- ターミナル確認
-![wsl](img/operation_check02.png "ターミナル確認")
+### 概要
+- Windows10 home　
+- pleiades-2023-03-java-win-64bit-jre_20230326
+- Mysql
+#### 欲を言うならUbuntu+docker cliでやりたかったがmavenもgradleも全然うまく動いてくれないのでwinOS上にダイレクト構築してます。ごめんね。
 
 - ブラウザアクセス  
-[http://localhost:8080/hello](http://localhost:8080/hello)  
-![wsl](img/operation_check03.png "ブラウザ確認")
+[ここを上から順にやってってください](https://medium-company.com/spring-boot%E7%92%B0%E5%A2%83%E6%A7%8B%E7%AF%89/)  
 
+- MySqlインストール時設定1
+![mysql設定1](img/,"ブラウザ確認")
 
-### DB作成（mysql）
-- ubuntu上で以下コマンドを実行
-  - pidをsystemctlにする
-    ``` 
-    sudo touch /etc/wsl.conf
-    sudo vim /etc/wsl.conf
-    ```
-      - wsl.conf記述内容
-        ``` 
-        [boot] 
-        systemd=true
-        ```
-  - ubuntuを再起動  
-    ``` wsl --shutdown ```
-
-  - mysqlインストールコマンド
-    ```
-    sudo apt-get update
-    sudo apt-get install mysql-server
-    sudo mysql_secure_installation
-    ```
-
-    ```
-    sudo systemctl start mysql
-    mysql -u root -p
-    ```
-  
-  - /app/db/ddl/create.sql　を実行（方法は任せる）
-  ![db](img/db_initialize.png "DBの状態")
-  
-  - mysql終了コマンド  
-  ``` sudo systemctl stop mysql ```
+- MySqlインストール時設定2
+![mysql設定2](img/,"ブラウザ確認")
 
 
