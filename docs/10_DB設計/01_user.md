@@ -24,4 +24,4 @@
 ## Other  
 ### MySQLのPW保管について
 - 【結論】実装コストが低けりゃなんでもいいや  
-![PW](..\img\password_settings.png)
+![PW](../img/password_settings.png)
